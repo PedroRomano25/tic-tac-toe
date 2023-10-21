@@ -1,0 +1,28 @@
+.game {
+  display: flex;
+  gap: 10px;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.winning-element {
+  -webkit-animation: blink 0.9s linear infinite;
+  -moz-animation: blink 0.9s linear infinite;
+  -ms-animation: blink 0.9s linear infinite;
+  -o-animation: blink 0.9s linear infinite;
+  animation: blink 0.9s linear infinite;
+}

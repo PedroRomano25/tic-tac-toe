@@ -1,0 +1,6 @@
+.game-table {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  height: fit-content;
+}

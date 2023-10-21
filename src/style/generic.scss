@@ -1,0 +1,35 @@
+@import "./tokens.scss";
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: $border-radius-button;
+  border: 1px solid $border-color-button;
+  padding: $button-padding;
+  font-size: $font-size-button;
+  font-weight: $font-weight-link;
+  font-family: inherit;
+  background-color: $color-background-button;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: $color-link;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

@@ -1,0 +1,22 @@
+.game-info {
+  h2,
+  ol {
+    margin: 0;
+  }
+  ol::-webkit-scrollbar {
+    display: none;
+  }
+  ol {
+    max-height: 304px;
+    overflow-y: auto;
+    padding: 0;
+
+    li {
+      margin: 5px 0;
+      list-style-type: none;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
