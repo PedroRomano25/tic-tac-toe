@@ -16,14 +16,15 @@ export const useGameStore = create<Store>()((set) => ({
       if (state.winner || currentSquares[i]) {
         return state;
       }
-      currentSquares[i] = state.xIsNext ? "X" : "O";
+      const nextPlayer = state.xIsNext ? "X" : "O";
+      currentSquares[i] = nextPlayer;
       const winner = calculateWinner(currentSquares);
-      let status = `Next player: X`;
-      if (winner) {
-        status = `Winner: ${winner}`;
-      } else {
-        status = `Next player: ${!state.xIsNext ? "X" : "O"}`;
-      }
+      const hasEmptySquares = currentSquares.some((item) => item === "");
+      const status = winner
+        ? `Winner: ${winner}`
+        : hasEmptySquares
+        ? `Next player: ${nextPlayer}`
+        : "No moves";
       return {
         history: newHistory.concat([currentSquares]),
         xIsNext: !state.xIsNext,
